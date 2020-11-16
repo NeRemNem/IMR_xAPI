@@ -83,11 +83,7 @@ public class WheelDistance : Deduction
             {
                 float left = i.distance_list[j];
                 float right = _whole_wheel_distance - left;
-                Debug.Log(left);
-                Debug.Log(right);
                 float distance = left < right ? left : right;
-
-                Debug.Log(distance);
                 sum += distance;
                 count++;
             }
