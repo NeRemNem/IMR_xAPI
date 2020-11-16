@@ -31,8 +31,7 @@ namespace IMR
                 _result = new Result();
                 _timestamp = null;
                 _authority = new Agent();
-                SetAuthority();   
-
+                SetAuthority();
             }
         }
 
@@ -67,19 +66,29 @@ namespace IMR
         }
 
         public static void SetScore(int value)
-        {
+        {            
+            Init();
             _result.score.raw = value;
         }
 
         public static void SetTimestamp(DateTime t)
         {
+            Init();
             _timestamp = t;
         }
 
         public static void SetAuthority()
         {
+            Init();
             _authority.name = "KoreaTech";
             _authority.mbox = "mailto:KoreaTech@koreatech.ac.kr";
+        }
+
+        public static void SetAuthority(string name, string mbox)
+        {
+            Init();
+            _authority.name = name;
+            _authority.mbox = mbox;
         }
 
         public static Statement GetStatement()

@@ -27,8 +27,8 @@ public class EndpointGUI : MonoBehaviour
         temp = GUI.TextField(new Rect(10, 10, 200, 20), temp, 100);
         GUI.Label(new Rect(30,90,300,200), StatementSender.EndPoint);
         GUI.Label(new Rect(30, 130, 300, 200), StatementSender.debug_msg);
-        if(StatementSender.lrs_res != null)
-            GUI.Label(new Rect(30, 160, 300, 200), StatementSender.lrs_res.ToString());
+        if(StatementSender.lrs_response != null)
+            GUI.Label(new Rect(30, 160, 300, 200), StatementSender.lrs_response.ToString());
         else
             GUI.Label(new Rect(30, 160, 300, 200), "NULL");
 
